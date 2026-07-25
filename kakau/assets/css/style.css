@@ -1,0 +1,214 @@
+/* --- [ VARIÁVEIS GLOBAIS ] --- */
+:root {
+  	--int: clamp(10px, 2vw, 20px);
+  	--ext: clamp(15px, 3vw, 30px);
+	--e-gap: 5px;
+  	--paragrafo: clamp(1.5rem, 2.5vw, 2rem);
+  	--b-angulo: 20px;
+  	--imag: clamp(100px, 20vw, 200px);
+	--sombra: 0 4px 6px black;
+}i
+
+/* --- [ VALORES GERAIS ] --- */
+
+* {
+  	scroll-behavior: smooth;
+}
+
+/* --- [ BASE ] --- */
+
+body {
+	background-image: url('../images/fundo_desktop.jpeg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 100vh;
+	text-align: justify;
+}
+
+header {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+	padding: var(--int);
+	margin: var(--ext);
+	background: rgba(75, 0, 130, 0.2);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(75, 0, 130, 0.2);
+  	border-radius: var(--b-angulo);
+	box-shadow: var(--sombra);
+}
+
+.titulo {
+  	display: flex;
+  	flex-direction: column;
+	align-self: center;
+  	align-items: center;
+}
+
+.conteudo {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: start;
+  	margin: var(--ext);
+  	padding: var(--int);
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: var(--b-angulo);
+	box-shadow: var(--sombra);
+}
+
+img {
+	height: var(--imag);
+	margin: 0;
+}
+
+/* --- [ TIPOGRAFIA ] --- */
+
+header h1 {
+  	margin: 0;
+}
+
+header p {
+  	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  	color: #00FFFF;
+}
+
+h1 {
+	font-size: clamp(4rem, 5vw, 5rem);
+}
+
+h2 {
+  	font-size: clamp(3rem, 4vw, 4rem);
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: clamp(3rem, 2vw, 2rem);
+	margin: 0;
+}
+
+p {
+  	font-size: var(--paragrafo);
+	line-height: 1;
+  	color: white;
+}
+
+span {
+	font-size: var(--paragrafo);
+}
+
+strong {
+	color: yellow;
+}
+
+/* --- [ Controle ] --- */
+
+button {
+	cursor: pointer;
+}
+
+.painel-musica {
+	display: flex;
+	justify-content: center;
+}
+
+.material-icons-outlined {
+	border: none;
+}
+
+.painel-musica .material-icons-outlined {
+	font-size: clamp(25px, 9vw, 35px);
+	margin: var(--ext);
+}
+
+.btn-stop,
+.btn-pause,
+.btn-play {
+	background: none;
+	border: 1px solid transparent;
+	border-radius: var(--b-angulo);
+	transition: all 0.3s ease;
+}
+
+.btn-stop:hover {
+	background: rgba(255, 0, 0, 0.2);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 0, 0, 0.2);
+	border-radius: var(--b-angulo);
+}
+
+.btn-pause:hover {
+	background: rgba(0, 0, 255, 0.2);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 255, 0.2);
+	border-radius: var(--b-angulo);
+}
+
+.btn-play:hover {
+	background: rgba(0, 255, 0, 0.2);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 255, 0.2);
+	border-radius: var(--b-angulo);
+}
+
+.controles {
+	display: flex;
+	align-items: center;
+	gap: var(--e-gap);
+}
+
+.player {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--e-gap);
+	padding: 0;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: var(--b-angulo);
+	box-shadow: var(--sombra);
+}
+
+/* --- [ VISUAL ] --- */
+
+hr {
+	height: 100%;
+	align-self: stretch;
+	border: 1px solid rgb(75, 0, 130);
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+/* --- [ MEDIDA PARA TELAS MENORES ] --- */
+
+@media (max-width: 655px) {
+  	body {
+		background-image: url('../images/fundo_mobile.jpeg');
+    		margin: 0;
+		text-align: initial;
+	}
+
+	p {
+		line-height: 1.5;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+}

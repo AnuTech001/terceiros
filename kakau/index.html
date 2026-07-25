@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  	<head>
+    		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"/>
+    		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="icon" href="assets/images/logo.png"/>
+    		<title>Blog</title>
+  	</head>
+	<body>
+    	<header>
+		<img src="assets/images/logo.png" 
+		alt="Logotipo circular de tecnologia com microchip central e circuitos em azul e cinza."/>
+		<h1>BLOG DA KAUH</h1>
+		<p>Por Kauane K. M. Souza</p>
+    	</header>
+    	<main>
+		<section id="audio">
+			<div class="painel-musica">
+				<div class="player">
+					<span class="material-icons-outlined">
+						music_note
+					</span>
+					<div class="controles">
+						<button id="parar" class="btn-stop" aria-label="Parar">
+							<span class="material-icons-outlined">stop</span>
+						</button>
+						<button id="tocar" class="btn-play" aria-label="Tocar">
+							<span class="material-icons-outlined">play_arrow</span>
+						</button>
+						<button id="pausar" class="btn-pause" aria-label=Pausar>
+							<span class="material-icons-outlined">pause</span>
+						</button>
+						<audio id="musica" src="assets/audio/lisboa.mp3"></audio>
+					</div>
+				</div>
+			</div>
+		</section>
+      		<section id="inicio-do-conteudo">
+        	<div class="conteudo">
+          		<div class="titulo">
+				<h2>Boas-vindas ao meu <em>blog</em>!</h2>
+          		</div>
+          		<p>Aqui vou compatilhar dicas de programação, experiências e curiosidades.</p>
+			<hr/>
+			<h2>A SAGA DA BIOS</h2>
+			<h3>Uma história verídica</h2>
+			<p>Esta história é um relato do meu primo contado com suas palavras.</p>
+			<p>Saudações aos leitores! Eu me chamo Luis Eduardo (codenome: AnuTech). Estarei falando sobre o meu relato em algo que chamo de <strong>A Saga da BIOS</strong>
+			</p>
+			<p>Por volta das 13h da tarde do dia 09 de julho de 2026, foi iniciada a troca do SO (sistema Operacional) atráves de um <em>pendrive</em> bootável (aquele que usamos para dar a partida no computador e instalar um sistema novo do zero, no meu caso o Fedora Linux).</p>
+			<p>A primeira batalha aconteceu logo na gravação do <em>pendrive</em>: a placa-mãe simplesmente se recusava a lê-lo. Perdi um bom companheiro de plástico e circuito nesse dia... Contudo, não e usei outro <em>pendrive</em>, que funcionou perfeitamente.</p>
+			<p>Depois de acessar a BIOS (o sistema básico que controla o <em>hardware</em> antes mesmo do computador ligar) e entrar na interface, iniciei o processo de formatação e instalação da distro. Mal sabia eu o que me aguardava... O que era para ser um trabalho de apenas uma tarde se converteu em 9 dias inteiros de puro desespero!</p>
+			<p>Um erro pouco conhecido e pouco falado surgiu como uma besta enfurecida. Já não havia mais volta: o Windows já tinha sido apagado e eu não conseguia avançar para salvar meu companheiro de guerra. Fiz inúmera pesquisas na <em>internet</em> em busca de respostas, mas nada resolvia. Cheguei até a cogitar trocar a placa-mãe, achando que ela tinha queimado ou pifado de vez.</p>
+			<p>Contudo, no dia 17 de julho de 2026, tive uma verdadeira epifania e decidi encarar as configurações da BIOS mais uma vez... Foi uma batalha épica de horas, até que finalmente encontrei o real responsável por toda aquela fúria: a data e a hora da BIOS estavam completamente incorrestas. Como o sistema precisa da hora certa para validar chaves de segurança e instalar os arquivos, a data errada simplesmente travava tudo!
+			<p><strong>Moral da história</strong>: Sempre que forem formatar um computador, verifiquem primeiro a data e a hora da BIOS. Se eu tivesse feito isso antes, teria me poupado muita dor de cabeça e alguns fios de cabelo!</p>
+        	</div>
+    	  	</section>
+    	</main>
+	<script src="assets/js/script.js"></script>
+    	<div vw class="enabled">
+      	<div vw-access-button class="active"></div>
+      	<div vw-plugin-wrapper>
+        	<div class="vw-plugin-top-wrapper"></div>
+      	</div>
+    	</div>
+    	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    	<script>
+      		new window.VLibras.Widget("https://vlibras.gov.br/app");
+    	</script>
+  	</body>
+</html>
