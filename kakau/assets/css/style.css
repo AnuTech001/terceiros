@@ -7,33 +7,50 @@
   	--b-angulo: 20px;
   	--imag: clamp(100px, 20vw, 200px);
 	--sombra: 0 4px 6px black;
-}i
+}
 
-/* --- [ VALORES GERAIS ] --- */
+/* --- [ BARRA DE ROLAGEM ] --- */
 
 * {
   	scroll-behavior: smooth;
+	scrollbar-color: white rgba(0, 0, 0, 0.1);
+	scrollbar-width: thin;
+}
+
+/* --- [ BARRA DE ROLAGEM VERSÃO LEGADA ] --- */
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: black;
+	border: 0.125rem solid white;
+}
+
+::webkit-scrollbar-thumb {
+	background: white;
+	border: 0.125rem solid white;
+	border-radius: 0.25rem;
 }
 
 /* --- [ BASE ] --- */
 
 body {
-	background-image: url('../images/fundo_desktop.jpeg');
+	background-image: url('../images/fundo_mobile.jpeg');
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 	min-height: 100vh;
-	text-align: justify;
 }
 
-header {
+header,
+footer {
   	display: flex;
   	flex-direction: column;
   	align-items: center;
 	padding: var(--int);
 	margin: var(--ext);
 	background: rgba(75, 0, 130, 0.2);
-	backdrop-filter: blur(10px);
 	border: 1px solid rgba(75, 0, 130, 0.2);
   	border-radius: var(--b-angulo);
 	box-shadow: var(--sombra);
@@ -53,10 +70,13 @@ header {
   	margin: var(--ext);
   	padding: var(--int);
 	background: rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(5px);
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: var(--b-angulo);
 	box-shadow: var(--sombra);
+}
+
+.aviso-mobile {
+	display: block;
 }
 
 img {
@@ -70,7 +90,8 @@ header h1 {
   	margin: 0;
 }
 
-header p {
+header p,
+footer p{
   	margin: 0;
 }
 
@@ -81,22 +102,22 @@ h3 {
 }
 
 h1 {
-	font-size: clamp(4rem, 5vw, 5rem);
+	font-size: 3rem;
 }
 
 h2 {
-  	font-size: clamp(3rem, 4vw, 4rem);
+  	font-size: 2.5rem;
 	margin-bottom: 0;
 }
 
 h3 {
-	font-size: clamp(3rem, 2vw, 2rem);
+	font-size: 2rem;
 	margin: 0;
 }
 
 p {
   	font-size: var(--paragrafo);
-	line-height: 1;
+	line-height: 1.5;
   	color: white;
 }
 
@@ -139,21 +160,18 @@ button {
 
 .btn-stop:hover {
 	background: rgba(255, 0, 0, 0.2);
-	backdrop-filter: blur(5px);
 	border: 1px solid rgba(255, 0, 0, 0.2);
 	border-radius: var(--b-angulo);
 }
 
 .btn-pause:hover {
 	background: rgba(0, 0, 255, 0.2);
-	backdrop-filter: blur(5px);
 	border: 1px solid rgba(0, 0, 255, 0.2);
 	border-radius: var(--b-angulo);
 }
 
 .btn-play:hover {
 	background: rgba(0, 255, 0, 0.2);
-	backdrop-filter: blur(5px);
 	border: 1px solid rgba(0, 0, 255, 0.2);
 	border-radius: var(--b-angulo);
 }
@@ -171,7 +189,6 @@ button {
 	gap: var(--e-gap);
 	padding: 0;
 	background: rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(5px);
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: var(--b-angulo);
 	box-shadow: var(--sombra);
@@ -187,28 +204,50 @@ hr {
 	margin-right: 0px;
 }
 
-/* --- [ MEDIDA PARA TELAS MENORES ] --- */
+/* --- [ VALORES DE ESTILO PARA COMPUTADORES ] --- */
 
-@media (max-width: 655px) {
-  	body {
-		background-image: url('../images/fundo_mobile.jpeg');
-    		margin: 0;
-		text-align: initial;
+@media (min-width: 655px) and (hover:hover) and (pointer:fine) {
+	body {
+		background-image: url('../images/fundo_desktop.jpeg');
+		background-attachment: fixed;
+		text-align: justify;
 	}
 
-	p {
-		line-height: 1.5;
+	header,
+	footer {
+		backdrop-filter: blur(10px);
+	}
+
+	.conteudo,
+	.player {
+		backdrop-filter: blur(5px);
+	}
+
+	.btn-stop:hover {
+		backdrop-filter: blur(5px);
+	}
+
+	.btn-pause:hover {
+		backdrop-filter: blur(5px);
+	}
+
+	.btn-play:hover {
+		backdrop-filter: blur(5px);
+	}
+	
+	.aviso-mobile {
+		display: none;
 	}
 
 	h1 {
-		font-size: 3rem;
+		font-size: clamp(4rem, 5vw, 5rem);
 	}
 
 	h2 {
-		font-size: 2.5rem;
+		font-size: clamp(3rem, 4vw, 4rem);
 	}
 
 	h3 {
-		font-size: 2rem;
+		font-size: clamp(2rem, 3vw, 3rem);
 	}
 }
